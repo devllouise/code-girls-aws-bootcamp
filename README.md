@@ -14,7 +14,7 @@ Cada desafio possui sua própria pasta, contendo:
 
 ## 📑 Desafios
 
-1. [Integração de sistemas On-Premises com AWS](./desafio-01-integracao-onprem-aws)  
-   ➝ Construção de uma arquitetura híbrida para conectar sistemas locais à nuvem com segurança e escalabilidade.  
-
+1. [Desafio 01 - Gerenciamento de Instâncias EC2 na AWS](./desafios/desafio01/README.md)  
+   ➝ Criação, configuração e gerenciamento de instâncias **EC2** integradas com **Lambda**, **API Gateway** e **S3**.  
+   
 *(novos desafios serão adicionados aqui conforme avanço no bootcamp)*
