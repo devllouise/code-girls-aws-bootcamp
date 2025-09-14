@@ -1,6 +1,6 @@
-# Bootcamp - Code Girls AWS - Desafios
+# ☁️ Bootcamp - Code Girls AWS - Desafios 
 
-Este repositório reúne os desafios realizados durante o **Bootcamp AWS**, com foco em **arquitetura de soluções em nuvem** e **boas práticas de integração**.  
+Este repositório reúne os desafios realizados durante o **Bootcamp Code Girls**, com foco em **arquitetura de soluções em nuvem** e **boas práticas de integração**.  
 
 ## 🎯 Objetivos
 - Praticar conceitos de **arquitetura em nuvem** utilizando a **AWS**  
