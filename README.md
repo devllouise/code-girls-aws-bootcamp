@@ -15,6 +15,15 @@ Cada desafio possui sua própria pasta, contendo:
 ## 📑 Desafios
 
 1. [Desafio 01 - Gerenciamento de Instâncias EC2 na AWS](./desafios/desafio01/README.md)  
-   ➝ Criação, configuração e gerenciamento de instâncias **EC2** integradas com **Lambda**, **API Gateway** e **S3**.  
+   ➝ Criação, configuração e gerenciamento de instâncias **EC2** integradas com **Lambda**, **API Gateway** e **S3**.
+
+2. [Desafio 02 - Hospedagem de Website Estático com Amazon S3](./desafios/desafio02/README.md)  
+   ➝ Publicação de um **site estático** no **Amazon S3**, configurando **bucket**, **políticas públicas** e **acesso via URL**.
+
+3. [Desafio 03 - Automação de Workflows com AWS Step Functions](./desafios/desafio03/README.md)  
+   ➝ Criação de **workflows automatizados** entre serviços AWS usando **Step Functions** e **Lambda**.
+
+4. [Desafio 04 - Criando Infraestrutura como Código com AWS CloudFormation](./desafios/desafio04/README.md)  
+   ➝ Implementação de **Infraestrutura como Código (IaC)** com **AWS CloudFormation**, automatizando a criação de recursos na nuvem.
    
 *(novos desafios serão adicionados aqui conforme avanço no bootcamp)*
