@@ -1,0 +1,74 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Infraestrutura automatizada simples - S3 + Lambda + Role - Maira Silverio"
+
+Resources:
+  # Bucket S3 para armazenar logs
+  MairaS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "maira-cloudformation-lab-${AWS::Region}-${AWS::AccountId}"
+      VersioningConfiguration:
+        Status: Enabled
+      Tags:
+        - Key: Projeto
+          Value: "LabCloudFormation"
+        - Key: CriadoPor
+          Value: "Maira Silverio"
+
+  # IAM Role para Lambda
+  MairaLambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "MairaLambdaExecRole-${AWS::Region}"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+        - arn:aws:iam::aws:policy/AmazonS3FullAccess
+
+  # Função Lambda
+  MairaLambdaFunction:
+    Type: AWS::Lambda::Function
+    DependsOn: MairaLambdaExecutionRole
+    Properties:
+      FunctionName: "MairaLambdaCloudFormationLab"
+      Handler: index.handler
+      Runtime: python3.9
+      Role: !GetAtt MairaLambdaExecutionRole.Arn
+      Environment:
+        Variables:
+          TARGET_BUCKET: !Ref MairaS3Bucket
+      Code:
+        ZipFile: |
+          import json
+          import boto3
+          import os
+          import datetime
+
+          def handler(event, context):
+              s3 = boto3.client('s3')
+              now = datetime.datetime.utcnow().isoformat()
+              bucket = os.environ['TARGET_BUCKET']
+              s3.put_object(
+                  Bucket=bucket,
+                  Key=f"log-{now}.txt",
+                  Body="Função Lambda executada com sucesso!"
+              )
+              return {
+                  "statusCode": 200,
+                  "body": json.dumps("Log criado com sucesso!")
+              }
+
+Outputs:
+  BucketName:
+    Description: "Bucket S3 criado"
+    Value: !Ref MairaS3Bucket
+
+  LambdaName:
+    Description: "Nome da função Lambda criada"
+    Value: !Ref MairaLambdaFunction

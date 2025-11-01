@@ -1,0 +1,31 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Minha primeira Stack com AWS CloudFormation - por Maíra Silvério"
+
+Parameters:
+  BucketNamePrefix:
+    Type: String
+    Default: "maira-cloudformation-lab"
+    Description: "Prefixo usado no nome do bucket S3"
+
+Resources:
+  MairaBucketS3:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${BucketNamePrefix}-${AWS::Region}"
+      VersioningConfiguration:
+        Status: Enabled
+      Tags:
+        - Key: CriadoPor
+          Value: "Maíra Silvério"
+        - Key: Projeto
+          Value: "PrimeiraStack"
+        - Key: Ambiente
+          Value: "Lab"
+
+Outputs:
+  BucketName:
+    Description: "Nome completo do bucket criado"
+    Value: !Ref MairaBucketS3
+  BucketRegion:
+    Description: "Região onde o bucket foi criado"
+    Value: !Ref AWS::Region

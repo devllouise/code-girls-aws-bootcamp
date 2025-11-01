@@ -60,6 +60,46 @@ Resources:
 
 ---
 
+### O que foi desenvolvido
+O template YAML criado neste desafio tem o objetivo de provisionar um **bucket S3** automaticamente, sem precisar usar o console.  
+Ele define apenas um recurso, mas já demonstra todo o poder do CloudFormation na automação da infraestrutura.
+
+**Principais características do template:**
+- Criação de um **bucket S3** com nome personalizado.  
+- Uso de uma **descrição YAML** organizada e declarativa.  
+- Aplicação de **tags de identificação**, facilitando rastreabilidade.  
+
+---
+
+### ⚙️ Estrutura do Projeto
+
+CloudFormation Stack
+│
+└── S3 Bucket (armazenamento gerado automaticamente)
+
+---
+
+### 🚀 Etapas do Lab
+1. Criei o arquivo `template-primeira-stack.yaml` com a definição do bucket.  
+2. Carreguei o template no **AWS CloudFormation Console**.  
+3. Esperei a Stack ser criada e conferi o status **CREATE_COMPLETE**.  
+4. Validei o bucket no **Amazon S3 Console**, confirmando a automação.  
+
+---
+
+### 📸 Evidências
+
+| Etapa | Evidência |
+|-------|------------|
+| 1️⃣ | Console do **CloudFormation** mostrando a Stack criada |
+| 2️⃣ | Console do **S3 Bucket** criado automaticamente |
+| 3️⃣ | **Propriedades do bucket** com o nome definido no template |
+| 4️⃣ | **Outputs da Stack** confirmando a criação com sucesso |
+
+> As imagens estão na pasta `/images/`
+
+---
+
 ### Aprendizados do desafio
 
 - Entender a estrutura e sintaxe dos templates CloudFormation.
