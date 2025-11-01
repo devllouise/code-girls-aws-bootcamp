@@ -8,7 +8,7 @@ A ideia foi entender como o CloudFormation **orquestra múltiplos serviços** da
 
 ---
 
-### 🧩 O que foi construído
+### O que foi construído
 O template YAML que desenvolvi faz o seguinte:
 
 1. Cria um **bucket S3 versionado**, usado para armazenar logs.  
@@ -18,16 +18,7 @@ O template YAML que desenvolvi faz o seguinte:
 
 ---
 
-### ⚙️ Arquitetura Final
-CloudFormation Stack
-│
-├── S3 Bucket (armazenamento de logs)
-├── IAM Role (permissões da Lambda)
-└── Lambda Function (gera log e envia para o bucket)
-
----
-
-### 🚀 Fluxo de criação
+### Fluxo de criação
 1. O template foi carregado no **AWS CloudFormation Console**.  
 2. A Stack foi criada e todos os recursos foram provisionados automaticamente.  
 3. Após a execução da Lambda, um novo log foi gerado e armazenado no bucket S3.  
@@ -35,7 +26,7 @@ CloudFormation Stack
 
 ---
 
-### 📸 Evidências do Lab
+### Evidências do Lab
 
 | Etapa | Evidência |
 |-------|------------|
@@ -51,7 +42,7 @@ CloudFormation Stack
 
 ---
 
-### 💡 Aprendizados do desafio
+### Aprendizados do desafio
 - Conectei múltiplos serviços AWS de forma 100% automatizada.  
 - Entendi o uso de **dependências (`DependsOn`)** e **variáveis de ambiente** no YAML.  
 - Reforcei a importância de versionar e documentar templates IaC.  

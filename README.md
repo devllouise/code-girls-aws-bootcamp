@@ -29,5 +29,5 @@ Cada desafio possui sua própria pasta, contendo:
 5. [Desafio 05 - Implementando Infraestrutura Automatizada com AWS CloudFormation](./desafios/desafio05/README.md)  
    ➝ Automação de uma **infraestrutura completa** na AWS com **CloudFormation**, criando bucket S3, função Lambda e permissões IAM integradas.
 
-   
-*(novos desafios serão adicionados aqui conforme avanço no bootcamp)*
+6. [Desafio 06 - Automatizando Tarefas com Lambda e S3](./desafios/desafio06/README.md)  
+   ➝ Função **Lambda** que grava automaticamente logs no **S3**, consolidando conhecimentos em automação e integração entre serviços AWS.

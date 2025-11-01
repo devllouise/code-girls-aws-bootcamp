@@ -71,15 +71,7 @@ Ele define apenas um recurso, mas já demonstra todo o poder do CloudFormation n
 
 ---
 
-### ⚙️ Estrutura do Projeto
-
-CloudFormation Stack
-│
-└── S3 Bucket (armazenamento gerado automaticamente)
-
----
-
-### 🚀 Etapas do Lab
+### Etapas do Lab
 1. Criei o arquivo `template-primeira-stack.yaml` com a definição do bucket.  
 2. Carreguei o template no **AWS CloudFormation Console**.  
 3. Esperei a Stack ser criada e conferi o status **CREATE_COMPLETE**.  
@@ -87,7 +79,7 @@ CloudFormation Stack
 
 ---
 
-### 📸 Evidências
+### Evidências
 
 | Etapa | Evidência |
 |-------|------------|
